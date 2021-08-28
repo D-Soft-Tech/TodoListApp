@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MVVMTodoListApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_new_task_fab">Add New Task Fab</string>
+    <string name="todo_item">Something i want to do</string>
+    <string name="priority_icon_description">Priority icon description</string>
+    <string name="task_name">Task name</string>
+    <string name="important_task">Important task</string>
+    <string name="time_created">Created: %1$s</string>
+    <string name="edit_page_ok_fab">Edit page ok fab</string>
 </resources>
