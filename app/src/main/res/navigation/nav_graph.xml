@@ -9,5 +9,33 @@
         android:id="@+id/tasks"
         android:name="com.example.mvvmtodolistapp.Tasks"
         android:label="fragment_tasks"
-        tools:layout="@layout/fragment_tasks" />
+        tools:layout="@layout/fragment_tasks" >
+        <action
+            android:id="@+id/action_tasks_to_addTask"
+            app:destination="@id/addTask" />
+        <action
+            android:id="@+id/action_tasks_to_updateTaskFragment"
+            app:destination="@id/updateTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTask"
+        android:name="com.example.mvvmtodolistapp.AddTask"
+        android:label="fragment_add_task"
+        tools:layout="@layout/fragment_add_task" >
+        <action
+            android:id="@+id/action_addTask_to_tasks"
+            app:destination="@id/tasks" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateTaskFragment"
+        android:name="com.example.mvvmtodolistapp.UpdateTaskFragment"
+        android:label="fragment_update_task"
+        tools:layout="@layout/fragment_update_task" >
+        <action
+            android:id="@+id/action_updateTaskFragment_to_tasks"
+            app:destination="@id/tasks" />
+        <argument
+            android:name="TaskToUpdate"
+            app:argType="com.example.mvvmtodolistapp.data.TaskDataClass" />
+    </fragment>
 </navigation>

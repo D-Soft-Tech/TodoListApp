@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -88,4 +89,7 @@ dependencies {
 
     // Easy permission library
     implementation 'pub.devrel:easypermissions:3.0.0'
+
+    // safe args
+    implementation "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5"
 }
