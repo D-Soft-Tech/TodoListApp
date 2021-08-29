@@ -8,5 +8,5 @@
     <string name="task_name">Task name</string>
     <string name="important_task">Important task</string>
     <string name="time_created">Created: %1$s</string>
-    <string name="edit_page_ok_fab">Edit page ok fab</string>
+    <string name="edit_page_ok_fab">Edit page OK fab</string>
 </resources>

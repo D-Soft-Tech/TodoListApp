@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/priority_icon.xml" value="0.2657407407407407" />
+        <entry key="app/src/main/res/font/poppins.xml" value="0.2657407407407407" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/add_task.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/edit_task.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_add_task.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/fragment_tasks.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_update_task.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/todo_item.xml" value="0.2947916666666667" />
       </map>
     </option>
