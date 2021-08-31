@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -55,12 +57,22 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
 
-    // Dagger Dependencies
-    implementation 'com.google.dagger:dagger:2.38.1'
-    implementation 'com.google.dagger:dagger-android:2.38.1'
-    implementation 'com.google.dagger:dagger-android-support:2.38.1' // if you use the support libraries
-    kapt 'com.google.dagger:dagger-android-processor:2.38.1'
-    kapt 'com.google.dagger:dagger-compiler:2.38.1'
+    // Dagger2 Dependencies
+//    implementation 'com.google.dagger:dagger:2.38.1'
+//    implementation 'com.google.dagger:dagger-android:2.38.1'
+//    implementation 'com.google.dagger:dagger-android-support:2.38.1' // if you use the support libraries
+//    kapt 'com.google.dagger:dagger-android-processor:2.38.1'
+//    kapt 'com.google.dagger:dagger-compiler:2.38.1'
+
+    // DaggerHilt Dependencies
+    def hilt = "2.38.1"
+    implementation "com.google.dagger:hilt-android:$hilt"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt"
+
+    // for using daggerHilt with view model
+    def hilt_lifeCycle = "1.0.0-alpha01"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_lifeCycle"
+    kapt "androidx.hilt:hilt-compiler:$hilt_lifeCycle"
 
     //Retrofit2
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
@@ -91,4 +103,8 @@ dependencies {
 
     // safe args
 //    implementation "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5"
+}
+// Allow references to generated code
+kapt {
+    correctErrorTypes true
 }

@@ -1,21 +1,22 @@
 package com.example.mvvmtodolistapp.data
 
-import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TaskDAO {
     @Query("SELECT * FROM task_table ORDER BY importance DESC")
-    fun getAllTaskFromDB(): LiveData<List<TaskDataClass>>
+    fun getAllTaskFromDB(): Flow<List<TaskDataClass>>
 
     @Delete
     suspend fun deleteSingleTask(taskToDelete: TaskDataClass)
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addTask(taskToBeAdded: TaskDataClass)
 
     @Update
